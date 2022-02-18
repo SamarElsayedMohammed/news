@@ -1,0 +1,12 @@
+<!-- templates/registration/login.html -->
+{% extends 'base.html' %}
+{% load bootstrap4 %}
+{% block title %}Log In{% endblock title %}
+{% block content %}
+<h2>Log In</h2>
+<form method="post">
+{% csrf_token %}
+{% bootstrap_form form  %}
+<input type="submit" class="btn" style="background:#f86041; color:white;" value="Log In">
+</form>
+{% endblock content %}

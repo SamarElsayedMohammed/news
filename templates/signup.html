@@ -1,0 +1,15 @@
+<!-- templates/signup.html -->
+{% extends 'base.html' %}
+{% load bootstrap4 %}
+{% load crispy_forms_tags %}
+{% block title %}Sign Up{% endblock title %}
+{% block content %}
+<h2>Sign Up</h2>
+
+<form method="post">
+{% csrf_token %}
+{{ form|crispy }}
+<!-- {% bootstrap_form  form %} -->
+<input type="submit" class="btn" style="background:#f86041; color:white;" value="Sign Up">
+</form>
+{% endblock content %}
